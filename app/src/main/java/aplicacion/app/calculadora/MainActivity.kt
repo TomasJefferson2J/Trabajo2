@@ -7,7 +7,7 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     var oper: Int = 0
-    var numero: Double = 0.0
+    var numero1: Double = 0.0
     lateinit var tv_num1: TextView
     lateinit var tv_num2: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         tv_num1 = findViewById(R.id.tv_num1)
         tv_num2 = findViewById(R.id.tv_num2)
+        val btnBorrar:
     }
 
     fun presionarDigito(view: View){
@@ -41,12 +42,24 @@ class MainActivity : AppCompatActivity() {
     fun clicOperacion(view: View){
         numero1 = tv_num2.text.toString().toDouble()
         var num2_text: String = tv_num2.text.toString()
+        tv_num2.setText("")
         when(view.id){
             R.id.btnSumar ->{
                 tv_num1.setText(num2_text + "+")
                 oper = 1
             }
-            R.id
+            R.id.btnRestar -> {
+                tv_num1.setText(num2_text + "-" )
+                oper = 2
+            }
+            R.id.btnMultiplicar ->{
+                tv_num1.setText(num2_text + "*")
+                oper = 3
+            }
+            R.id.btnDividir -> {
+                tv_num1.setText(num2_text + "/" )
+                oper = 4
+            }
         }
 
     }
