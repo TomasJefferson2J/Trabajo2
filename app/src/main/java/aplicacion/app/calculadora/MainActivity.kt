@@ -13,7 +13,11 @@ class MainActivity : AppCompatActivity() {
 
     fun presionarDigito(view: View){
         val tv_num2: TextView = findViewById(R.id.tv_num2)
-        var num2: Double = tv_num2.text.toString().toDouble()
-        
+        var num2: String = tv_num2.text.toString()
+
+        when(view.id){
+            R.id.btn0 -> tv_num2.setText(num2 + "0")
+            R.id.btn
+        }
     }
 }
