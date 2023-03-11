@@ -172,6 +172,7 @@
         android:id="@+id/btn0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
         android:text="0"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnDecimal"
         app:layout_constraintEnd_toStartOf="@+id/btnDecimal"
