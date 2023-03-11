@@ -3,6 +3,7 @@ package aplicacion.app.calculadora
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,13 @@ class MainActivity : AppCompatActivity() {
 
         tv_num1 = findViewById(R.id.tv_num1)
         tv_num2 = findViewById(R.id.tv_num2)
-        val btnBorrar:
+        val btnBorrar: Button = findViewById(R.id.btnBorrar)
+        val btnIgual: Button = findViewById(R.id.btnIgual)
+
+        btnIgual.setOnClickListener{
+            var numero2: Double = tv_num2.text.toString().toDouble()
+            var respuesta: Double = 
+        }
     }
 
     fun presionarDigito(view: View){
