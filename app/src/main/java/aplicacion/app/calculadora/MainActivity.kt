@@ -22,7 +22,24 @@ class MainActivity : AppCompatActivity() {
 
         btnIgual.setOnClickListener{
             var numero2: Double = tv_num2.text.toString().toDouble()
-            var respuesta: Double = 
+            var resp: Double = 0.0
+
+            when(oper){
+                1 -> resp = numero1 + numero2
+                2 -> resp = numero1 - numero2
+                3 -> resp = numero1 * numero2
+                4 -> resp = numero1 / numero2
+            }
+
+            tv_num2.setText(resp.toString())
+            tv_num1.setText("")
+        }
+        btnBorrar.setOnClickListener{
+            tv_num1.setText("")
+            tv_num2.setText("")
+            numero1 = 0.0
+            oper = 0
+
         }
     }
 
